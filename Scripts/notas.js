@@ -1,4 +1,4 @@
-// Criando objeto Aluno
+// criando objeto Aluno
 class Aluno {
     constructor(nome, nota1, nota2, nota3, nota4) {
         this.nome = nome;
@@ -11,7 +11,7 @@ class Aluno {
     }
 }
 
-// Função do menu inicial
+// função do menu inicial
 function inicio() {
     let opcao;
     do {
@@ -46,7 +46,7 @@ function inicio() {
     } while (opcao !== 5);
 }
 
-// Função para cadastrar alunos
+// função para cadastrar alunos
 let alunos = [];
 function cadastrar() {
     for (let i = 0; i < 20; i++) {
@@ -59,10 +59,9 @@ function cadastrar() {
         let aluno = new Aluno(nome, nota1, nota2, nota3, nota4);
         alunos.push(aluno);
     }
-
 }
 
-// Função para pesquisar alunos
+// função para pesquisar alunos
 function pesquisar() {
     let nomePesquisa = prompt("Digite o nome do aluno a pesquisar: ");
     for (let aluno of alunos) {
@@ -77,13 +76,13 @@ function pesquisar() {
     alert("Aluno não encontrado!");
 }
 
-// Função para classificar alunos
+// função para classificar alunos
 function classificar() {
     alunos.sort((a, b) => a.nome.localeCompare(b.nome));
     alert("Alunos classificados por nome com sucesso.");
 }
 
-// Função para apresentar todos os registros
+// função para apresentar todos os registros
 function apresentarAlunos() {
     if (alunos.length === 0) {
         alert("Nenhum registro encontrado.");
@@ -100,10 +99,10 @@ function apresentarAlunos() {
     alert(mensagem);
 }
 
-// Função para sair
+// função para sair
 function sair() {
     alert("Saindo do programa. Até logo!");
 }
 
-// Chama a função inicio para iniciar o programa
+// chama a função inicio para iniciar o programa
 inicio();
